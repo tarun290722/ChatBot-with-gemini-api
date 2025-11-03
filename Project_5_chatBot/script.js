@@ -1,6 +1,6 @@
 const promptInp = document.getElementById("prompt");
 const chatContainer = document.querySelector(".chat-box");
-const APIkey = "AIzaSyB8e5cIQ55DcGb5ti8ElEcgB9kRLhmM2Xo";
+const APIkey = "You'r API Key";
 const ApiURL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${APIkey}`;
 const sendBtn=document.querySelector("#sendBtn");
 let user = {
@@ -96,5 +96,6 @@ if(e.key=="/")
   promptInp.focus();
 }
 // console.log(e);
+
 
 })
