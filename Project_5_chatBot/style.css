@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    /* dark navy background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 400px;
+    /* default small */
+    height: 600px;
+    background: #161b22;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 14px;
+    align-items: flex-end;
+}
+
+.message.bot {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.message.user {
+    justify-content: flex-end;
+    gap: 15px;
+}
+#aiImg{
+    width: 40px;
+    border-radius: 50%;
+    border-radius: 50%;
+     align-self: flex-end;
+}
+#userImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+.bubble {
+    max-width: 70%;
+    height: fit-content;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* bot bubble */
+.bot .bubble {
+    background: #1f2937;
+    color: #e5e7eb;
+    border-radius: 20px 20px 20px 0;
+    box-shadow: 2px 2px 10px rgba(199, 195, 195, 0.3);
+}
+
+/* user bubble */
+.user .bubble {
+    background: #312e81;
+    color: #f9fafb;
+    border-radius: 20px 0 20px 20px;
+    box-shadow: 2px 2px 10px rgba(199, 195, 195, 0.3);
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #1c2129;
+    border-top: 1px solid #2a2f36;
+    gap: 10px;
+}
+
+.input-box input[type="file"] {
+    display: none;
+}
+
+.input-box label {
+    background: #1f2937;
+    color: #9ca3af;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    box-shadow: 2px 2px 10px rgba(199, 195, 195, 0.199);
+}
+
+.input-box label:hover {
+    background: #374151;
+}
+
+.input-box input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #0f172a;
+    color: #e5e7eb;
+    font-size: 14px;
+    box-shadow: 2px 2px 10px rgba(199, 195, 195, 0.199);
+}
+
+.input-box input[type="text"]::placeholder {
+    color: #9ca3af;
+}
+
+.input-box button {
+    background: #312e81;
+    border: none;
+    text-align: center;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s;
+    box-shadow: 2px 2px 10px rgba(199, 195, 195, 0.199);
+}
+
+.input-box button:hover {
+    background: #4338ca;
+}
+
+/* 📱 Phone screens */
+@media (max-width: 480px) {
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .bubble {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .input-box input[type="text"] {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* 📲 Tablet screens */
+@media (max-width: 768px) and (min-width: 481px) {
+    .chat-container {
+        width: 90%;
+        height: 90vh;
+    }
+
+    .bubble {
+        font-size: 14px;
+    }
+}
+
+/* 💻 PC screens */
+@media (min-width: 769px) {
+    .chat-container {
+        width: 80%;
+        /* takes 80% of screen */
+        height: 90vh;
+        /* takes 90% of viewport height */
+    }
+}
+.load{
+    width:2em;
+    height: 1.2em;
+}

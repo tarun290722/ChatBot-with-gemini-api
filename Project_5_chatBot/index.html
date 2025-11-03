@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHITCHAT GPT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    
+    <!--Chat Container Area-->
+    <div class="chat-container">
+      <div class="chat-box">
+        <div class="message bot">
+          <img
+            src="images/ai.png
+              "
+            alt=""
+            id="aiImg"
+          />
+          <div class="bubble">Hello !How Can I Help You Today?</div>
+        </div>
+      </div>
+
+      <!-- Input box with upload + text + send -->
+      <div class="input-box">
+        <!-- Text input -->
+        <input
+          type="text"
+          placeholder="Message..."
+          id="prompt"
+          autocomplete="off"
+        />
+        <!-- Upload button -->
+        <input type="file" id="fileUpload" />
+        <label for="fileUpload">📎</label>
+        <!-- Send button -->
+        <button id="sendBtn">➤</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
